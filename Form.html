@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Create a new event</title>
+    <link rel="stylesheet" href="Form.css">
+	<script src = "Form.js"></script>
+</head>
+<body>
+    <form>
+    <fieldset>
+    <label for="EventType">Event Type:</label>
+    <select  id="EventType" name="EventType"required>
+      <option>Choose one</option>
+      <option value="Conference">Conference</option>
+      <option value="Speaker Session">Speaker Session</option>
+      <option value="Seminar">Seminar</option>
+      <option value="Teambuilding">Team-Building</option>
+      <option value="Pressconference">Press Conference</option>
+      <option value="Awarding">Awards and Competitions</option>
+      <option value="Wedding">Wedding</option>
+      <option value="Birthday">Birthday</option>
+      <option value="Family">Family Gathering</option>
+    </select>
+    <br>
+    <label for="EventTitle">Event Title:</label>
+    <input type ="text"  id="EventTitle"required ></input><br><br>
+    <label for="date">Event Dates:</label>
+    <input type="date"  id="StartDate" required></input>  to 
+    <input type="date" id="EndDate" required oninput="CorrectDate()"></input><br>
+    <label for="Postdate">Posting date:</label>
+    <input type="date" id="Postdate"required></input>
+   
+    <br>
+  
+        <div>
+        <input type="checkbox"  id="firstQ" name= "firstQ" onclick="function1()"></input>
+        <label for="firstQ">Is Registration required?</label><br><br>
+        
+        <div id="f1" style="display:none">
+        Please list down all your Requirements for Registration<br>
+        <textarea></textarea>
+        </div>
+
+    </div>    
+    <div>
+        <input type="checkbox"  id="SecondQ" name="SecondQ"onclick="function2()"></input>
+        <label for="SecondQ">Is this event associated with any Family Programs?</label>
+
+        <div id="f2" style="display:none">
+            Please list down all associated Family Programs<br>
+            <textarea></textarea>
+            </div>
+
+    </div>
+    <br>
+    <div>
+        <input type="checkbox" id="ThirdQ" name="ThirdQ"onclick="function3()"></input>
+        <label for="ThirdQ">Upon Registration Completion, Are users to receive an Auto generated Email?</label><br>
+        <div id="f3" style="display:none">
+            Yes, they will recieve an Auto generated Email<br>
+
+            </div>
+    </div>
+    <br>
+    <div>
+        <input type="checkbox" id="FourthQ" name="FourthQ"  onclick="function4()"></input>
+        <label for="FourthQ">Is there a Point of Contact?</label><br>
+
+        <div id="f4" style="display:none">
+            Point of Contact<br>
+            <label for="ContactName"> Contact Name: </label>
+            <input type="text" id="ContactName" required></input><br><br>
+
+            <label for="ContactNumber" > Contact Number: </label>
+            <input type="number"id="ContactNumber"required ></input>
+         </div>
+    </div>
+    <br>
+    <div>
+        <input type="checkbox" id="FifthQ" name="FifthQ" onclick="function5()"></input>
+        <label for="FifthQ">Is there a Hosting Command Point of Contact?</label><br>
+        <div id="f5" style="display:none">
+            Hosting Command Point of Contact<br>
+            <label for="ContactName"> Host Contact Name: </label>
+            <input type="text" id="ContactName" required ></input><br><br>
+
+            <label for="ContactNumber" > Host Contact Number: </label>
+            <input type="number"id="ContactNumber"required></input>
+         </div>
+
+    </div>
+    
+    </fieldset>
+    <div id="Buttons">
+        <input type = "submit" id="Save" value = "Save" onclick="submt()"/>
+        <input type = "reset" id="Cancel" value = "Cancel"/>
+    </div>
+   
+</form>
+</body>
+</html>
